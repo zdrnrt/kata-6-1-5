@@ -1,0 +1,19 @@
+{
+  "name": "kata_6_1_5",
+  "version": "1.0.0",
+  "description": "https://platform.kata.academy/user/courses/1/6/1/5",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zdrnrt/kata-6-1-5.git"
+  },
+  "author": "artfan95@gmail.com @zdrnart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zdrnrt/kata-6-1-5/issues"
+  },
+  "homepage": "https://github.com/zdrnrt/kata-6-1-5#readme"
+}
