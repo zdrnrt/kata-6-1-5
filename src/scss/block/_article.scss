@@ -1,10 +1,10 @@
 .article{
-    padding: 20px 0 35px;
+    padding: 1.25rem 0 2rem;
     @media screen and (min-width: 768px) {
-        padding: 24px 0 50px;
+        padding: 1.5rem 0 3.125rem;
     }
     @media screen and (min-width: 1120px) {
-        padding: 42px calc((100vw - 1120px) / 2);
+        padding: 2.6rem 0;
     }
     &__header{
         @media screen and (min-width: 1120px) {
@@ -25,30 +25,30 @@
             top: 50%;
             right: 0;
             transform: translate(0, -50%);
-            width: 24px;
-            height: 44px;
+            width: 1.5rem;
+            height: 2.75rem;
             background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.00) 100%);
         }
     }
     &__title{
         position: relative;
-        padding: 0 16px;
-        font-size: 28px;
+        padding: 0 1rem;
+        font-size: 1.75rem;
         font-weight: 700;
-        color: #1B1C21;
+        color: $black;
         &::before{
             content: "";
             position: absolute;
             left: 0;
             top: 50%;
             transform: translate(0, -50%);
-            width: 4px;
-            height: 40px;
-            background-color: #41F6D7;
-            border-radius: 0 4px 4px 0;
+            width: 0.25rem;
+            height: 2.5rem;
+            background-color: $cian;
+            border-radius: 0 0.25rem 0.25rem 0;
         }
         @media screen and (min-width: 1120px) {
-            padding: 0 32px;
+            padding: 0 2rem;
             flex-grow: 1;
         }
     }
@@ -60,8 +60,8 @@
         flex-flow: row nowrap;
         align-items: center;
         justify-content: flex-start;
-        column-gap: 32px;
-        padding-right: 32px;
+        column-gap: 2rem;
+        padding-right: 2rem;
     }
 }
 .article-info-link{
@@ -69,14 +69,14 @@
     flex-flow: row nowrap;
     align-items: center;
     justify-content: flex-start;
-    column-gap: 8px;
+    column-gap: 0.5rem;
     text-decoration: none;
-    color: #1B1C21;
+    color: $black;
     &:hover{
         opacity: 0.7;
     }
     &__icon{
-        width: 40px;
+        width: 2.5rem;
     }
 
 }
@@ -86,18 +86,18 @@
     flex-flow: row nowrap;
     align-items: center;
     justify-content: flex-start;
-    padding: 22px 16px;
+    padding: 22px 1rem;
     overflow: auto;
     @media screen and (min-width: 768px) {
-        padding: 28px 24px;
+        padding: 1.75rem 1.5rem;
     }
     @media screen and (min-width: 1120px) {
-        padding: 8px 32px 10px;
+        padding: 8px 2rem 10px;
         flex-wrap: wrap;
         row-gap: 6px;
     }
     &__link{
-        padding: 8px 16px;
+        padding: 8px 1rem;
         flex-shrink: 0;
         font-weight: 500;
         letter-spacing: -0.2px;
@@ -108,19 +108,20 @@
         &:active,
         &--active{
             border-color: #B8FFEC;
+            background-color: $white;
         }
         &:hover{
-            color: #1B1C21;
+            color: $black;
         }
     }
 }
 
 .article-content{
     @media screen and (min-width: 768px) {
-        padding: 0px 24px 40px;
+        padding: 0px 1.5rem 2.5rem;
     }
     @media screen and (min-width: 1120px) {
-        padding: 0px 32px 0px;
+        padding: 0px 2rem 0px;
     }
     &--hidden{
         .article-content__more{
@@ -156,12 +157,12 @@
             opacity: 0.7;
         }
         &-icon{
-            width: 24px;
-            height: 24px;
+            width: 1.5rem;
+            height: 1.5rem;
         }
     }
     &__descr{
-        padding: 0 16px 10px;
+        padding: 0 1rem 10px;
         @media screen and (min-width: 768px) {
             padding: 0;
         }
@@ -171,17 +172,17 @@
     }
     p{
         margin: 0;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-weight: 400;
-        line-height: 18px;
+        line-height: 1.125rem;
         letter-spacing: 0.2px;
         @media screen and (min-width: 768px) {
-            line-height: 20px;
+            line-height: 1.25rem;
         }
         & + p{
-            margin-top: 18px;
+            margin-top: 1.125rem;
             @media screen and (min-width: 768px) {
-                margin-top: 20px;
+                margin-top: 1.25rem;
             }
         }
     }

@@ -1,17 +1,14 @@
 html{
-    font-size: 16px;
-}
-body{
     font-family: "TT Lakes", sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    color: #1B1C21;
+    color: $black;
 }
 *{
     box-sizing: border-box;
 }
 *:focus-within{
-    outline-color: rgb(255, 62, 121);
+    outline-color: $pink;
 }
 h1, h2, h3 {
     margin: 0;

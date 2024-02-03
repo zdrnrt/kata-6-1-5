@@ -40,7 +40,7 @@
         height: 12px;
         border-radius: 50%;
         background-color: #DDDDDD;
-        transition: 0.3s ease;
+        transition: $trans;
         &--active{
             background-color: #B5B6BC;
         }
@@ -103,7 +103,7 @@
         }
     }
     &__item{
-        transition: 0.3s all;
+        transition: $trans;
         &.swiper-slide-active{
             max-width: 240px;
         }
@@ -134,7 +134,7 @@
     border: 1px solid #EAEAEA;
     background-color: #fff;
     border-radius: 6px;
-    transition: 0.3s all;
+    transition: $trans;
     &:hover{
         .brand-item__circle{
             fill: #FF3E79;
@@ -157,11 +157,11 @@
     &__circle{
         stroke-width: 2px;
         stroke: #FF3E79;
-        transition: 0.3s ease-out;
+        transition: $trans;
     }
     &__arrow{
         fill: #FF3E79;
-        transition: 0.3s ease-in;
+        transition: $trans;
         transform-origin: center;
     }
 }

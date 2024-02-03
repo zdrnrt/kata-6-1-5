@@ -1,0 +1,19 @@
+.content{
+    @media screen and (min-width: 1440px) {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: stretch;
+        padding: 0 calc((100vw - 1440px) / 2);
+    }
+    &__container{
+        background-color: $greyBg;
+        @media screen and (min-width: 1120px) {
+            padding: 0 calc((100vw - 1120px) / 2);
+        }
+        @media screen and (min-width: 1440px) {
+            padding: 0;
+            flex: 1 0 calc(100% - 320px);
+        }
+    }
+}
