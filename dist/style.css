@@ -956,7 +956,7 @@ img {
     display: none; }
 
 .aside {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: -100%;
@@ -995,7 +995,13 @@ img {
       visibility: visible;
       flex: 0 0 320px;
       box-shadow: none;
-      max-height: unset;
+      overflow: auto;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+      max-height: -webkit-max-content;
+      max-height: -moz-max-content;
+      max-height: max-content;
       min-height: 100vh; } }
   .aside__header {
     width: 100%;

@@ -1,3 +1,4 @@
 import '../scss/style.scss';
-import Brand from './brand';
+import menu from './menu';
+//import brand from './brand';
 console.log('Works!')
