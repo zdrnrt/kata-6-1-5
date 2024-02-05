@@ -8,6 +8,8 @@
 .brand{
     &__header{
         padding: 1rem;
+        background: linear-gradient(270deg, $greyBg 0%, $white 98.61%);
+        border-top: 1px solid $lightcian;
         @media screen and (min-width: 768px) {
             padding: 1rem 1.5rem;
         }
@@ -49,15 +51,7 @@
 
 .brand-list{
     position: relative;
-    background: linear-gradient(270deg, $greyBg 0%, $white 98.61%);
     overflow: hidden;
-    // @media screen and (min-width: 768px) and (max-width: 1119px) {
-    //     &--open &__slider .brand-list__item:nth-child(n + 7){
-    //         display: block;
-    //     }
-    // }
-    // @media screen and (min-width: 1120px) {
-    // }
     @media screen and (max-width: 767px) {
         &::after{
             content: "";
@@ -70,17 +64,7 @@
             background: linear-gradient(270deg, $greyBg 16.84%, transparent 100%);
         }
     }
-    &--open &__slider .brand-list__item:nth-child(n){
-        display: block;
-    }
-    &--open .brand-more__text--show{
-        display: none;
-    }
-    &--open .brand-more__text--hide{
-        display: block;
-    }
     &__slider{
-        
         @media screen and (min-width: 768px) {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -90,26 +74,34 @@
             row-gap: 1rem;
         }
         @media screen and (min-width: 768px) and (max-width: 1119px) {
-            .brand-list__item:nth-child(n + 7){
-                display: none;
-            }
+            // .js-more__item:nth-child(n + 7){
+            //     display: none;
+            // }
             
         }
         @media screen and (min-width: 1120px) {
             grid-template-columns: repeat(4, 1fr);
-            .brand-list__item:nth-child(n + 9){
-                display: none;
-            }
+            // .js-more__item:nth-child(n + 9){
+            //     display: none;
+            // }
         }
     }
     &__item{
         transition: $trans;
-        &.swiper-slide-active{
-            max-width: 240px;
-        }
         @media screen and (min-width: 768px) {
-            max-width: unset;
             flex-basis: calc(33% - 1rem);
+        }
+    }
+    .js-more__item{
+        @media screen and (min-width: 768px) and (max-width: 1119px) {
+            &:nth-child(n + 7){
+                display: none;
+            }
+        }
+        @media screen and (min-width: 1120px) {
+            &:nth-child(n + 9){
+                display: none;
+            }
         }
     }
     &__nav{

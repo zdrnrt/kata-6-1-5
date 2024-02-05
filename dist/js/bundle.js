@@ -10420,7 +10420,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu */ "./src/js/menu.js");
 /* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_menu__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _more__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./more */ "./src/js/more.js");
-/* harmony import */ var _more__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_more__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _brand__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./brand */ "./src/js/brand.js");
 
 
@@ -10452,21 +10451,61 @@ close.addEventListener('click', mainMenu);
 /*!************************!*\
   !*** ./src/js/more.js ***!
   \************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-function brandMore() {
-  if (!!document.querySelector('.js-brand-more')) {
-    var brandsMoreBtn = document.querySelector('.js-brand-more');
-    brandsMoreBtn.addEventListener('click', function () {
-      this.closest('.brand-list').classList.toggle('brand-list--open');
-    });
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _scss_block_more_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/block/_more.scss */ "./src/scss/block/_more.scss");
+/* harmony import */ var _scss_block_more_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_block_more_scss__WEBPACK_IMPORTED_MODULE_0__);
+function _createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+
+
+function more() {
+  function moreOpen(event) {
+    event.target.closest('.js-more').classList.toggle('js-more--open');
+  }
+
+  ;
+
+  if (!!document.querySelector('.js-more__btn') && window.innerWidth > 768) {
+    var brandsMoreBtns = document.querySelectorAll('.js-more__btn');
+
+    var _iterator = _createForOfIteratorHelper(brandsMoreBtns),
+        _step;
+
+    try {
+      for (_iterator.s(); !(_step = _iterator.n()).done;) {
+        var moreBtn = _step.value;
+        moreBtn.addEventListener('click', moreOpen);
+      }
+    } catch (err) {
+      _iterator.e(err);
+    } finally {
+      _iterator.f();
+    }
   }
 }
 
 (function () {
-  brandMore();
+  more();
 })();
+
+/***/ }),
+
+/***/ "./src/scss/block/_more.scss":
+/*!***********************************!*\
+  !*** ./src/scss/block/_more.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 

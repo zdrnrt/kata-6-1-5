@@ -1,11 +1,17 @@
+import '../scss/block/_more.scss'
 
-function brandMore(){
-    if (!!document.querySelector('.js-brand-more')){
-        let brandsMoreBtn = document.querySelector('.js-brand-more');
-        brandsMoreBtn.addEventListener('click', function (){this.closest('.brand-list').classList.toggle('brand-list--open')});
+function more(){
+    function moreOpen(event){
+        event.target.closest('.js-more').classList.toggle('js-more--open');
+    };
+    if (!!document.querySelector('.js-more__btn') && window.innerWidth > 768){
+        let brandsMoreBtns = document.querySelectorAll('.js-more__btn');
+        for (let moreBtn of brandsMoreBtns){
+            moreBtn.addEventListener('click', moreOpen);
+        }
     }
 }
 
 (function(){
-    brandMore();
+    more();
 })()

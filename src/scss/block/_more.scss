@@ -1,0 +1,16 @@
+.js-more{
+    &--open .js-more__item:nth-child(n){
+        display: block;
+    }
+    &--open .js-more__text--show{
+        display: none;
+    }
+    &--open .js-more__text--hide{
+        display: block;
+    }
+    &__text{
+        &--hide{
+            display: none;
+        }
+    }
+}

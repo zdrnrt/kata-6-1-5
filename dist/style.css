@@ -820,7 +820,9 @@ img {
   text-transform: uppercase; }
 
 .brand__header {
-  padding: 1rem; }
+  padding: 1rem;
+  background: linear-gradient(270deg, #F8F8F8 0%, #fff 98.61%);
+  border-top: 1px solid #D9FFF5; }
   @media screen and (min-width: 768px) {
     .brand__header {
       padding: 1rem 1.5rem; } }
@@ -858,7 +860,6 @@ img {
 
 .brand-list {
   position: relative;
-  background: linear-gradient(270deg, #F8F8F8 0%, #fff 98.61%);
   overflow: hidden; }
   @media screen and (max-width: 767px) {
     .brand-list::after {
@@ -870,12 +871,6 @@ img {
       width: 1.5rem;
       height: 5rem;
       background: linear-gradient(270deg, #F8F8F8 16.84%, transparent 100%); } }
-  .brand-list--open .brand-list__slider .brand-list__item:nth-child(n) {
-    display: block; }
-  .brand-list--open .brand-more__text--show {
-    display: none; }
-  .brand-list--open .brand-more__text--hide {
-    display: block; }
   @media screen and (min-width: 768px) {
     .brand-list__slider {
       display: grid;
@@ -885,22 +880,20 @@ img {
       -moz-column-gap: 1.5rem;
            column-gap: 1.5rem;
       row-gap: 1rem; } }
-  @media screen and (min-width: 768px) and (max-width: 1119px) {
-    .brand-list__slider .brand-list__item:nth-child(n + 7) {
-      display: none; } }
   @media screen and (min-width: 1120px) {
     .brand-list__slider {
-      grid-template-columns: repeat(4, 1fr); }
-      .brand-list__slider .brand-list__item:nth-child(n + 9) {
-        display: none; } }
+      grid-template-columns: repeat(4, 1fr); } }
   .brand-list__item {
     transition: 0.3s ease; }
-    .brand-list__item.swiper-slide-active {
-      max-width: 240px; }
     @media screen and (min-width: 768px) {
       .brand-list__item {
-        max-width: unset;
         flex-basis: calc(33% - 1rem); } }
+  @media screen and (min-width: 768px) and (max-width: 1119px) {
+    .brand-list .js-more__item:nth-child(n + 7) {
+      display: none; } }
+  @media screen and (min-width: 1120px) {
+    .brand-list .js-more__item:nth-child(n + 9) {
+      display: none; } }
   @media screen and (min-width: 768px) {
     .brand-list__nav {
       display: none; } }
@@ -1124,6 +1117,18 @@ img {
       opacity: 0.7; }
     .aside-lang__item--active {
       color: #7E7E82; }
+
+.js-more--open .js-more__item:nth-child(n) {
+  display: block; }
+
+.js-more--open .js-more__text--show {
+  display: none; }
+
+.js-more--open .js-more__text--hide {
+  display: block; }
+
+.js-more__text--hide {
+  display: none; }
 
 
 /*# sourceMappingURL=style.css.map*/
