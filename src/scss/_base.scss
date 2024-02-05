@@ -13,10 +13,13 @@ html{
 h1, h2, h3 {
     margin: 0;
 }
-
+a{
+    transition: $trans;
+}
 button{
     padding: 0;
     border: none;
+    transition: $trans;
     background-color: transparent;
     cursor: pointer;
 }
