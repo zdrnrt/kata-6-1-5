@@ -4,6 +4,19 @@ html{
     line-height: 1.5;
     color: $black;
 }
+body::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    visibility: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: $white;
+    opacity: 0;
+    transition: $trans;
+}
 *{
     box-sizing: border-box;
 }

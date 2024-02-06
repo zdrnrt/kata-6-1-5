@@ -10371,41 +10371,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/js/brand.js":
-/*!*************************!*\
-  !*** ./src/js/brand.js ***!
-  \*************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
-/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
-
-
-
-if (window.innerWidth < 768 && !!document.querySelector('.js-brand-slider')) {
-  var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-brand-slider', {
-    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__["Navigation"], swiper_modules__WEBPACK_IMPORTED_MODULE_1__["Pagination"]],
-    speed: 400,
-    spaceBetween: 16,
-    centeredSlides: true,
-    centerInsufficientSlides: true,
-    slidePerView: 0.5,
-    pagination: {
-      el: '.js-brand-slider-nav',
-      type: 'bullets',
-      bulletActiveClass: 'brand-nav__btn--active',
-      bulletClass: 'brand-nav__btn',
-      bulletElement: 'button',
-      clickable: true
-    }
-  });
-}
-
-/***/ }),
-
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
@@ -10420,7 +10385,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu */ "./src/js/menu.js");
 /* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_menu__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _more__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./more */ "./src/js/more.js");
-/* harmony import */ var _brand__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./brand */ "./src/js/brand.js");
+/* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./slider */ "./src/js/slider.js");
 
 
 
@@ -10467,13 +10432,15 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 
 function more() {
+  console.log('more');
+
   function moreOpen(event) {
     event.target.closest('.js-more').classList.toggle('js-more--open');
   }
 
   ;
 
-  if (!!document.querySelector('.js-more__btn') && window.innerWidth > 768) {
+  if (!!document.querySelector('.js-more__btn') && window.innerWidth > 767) {
     var brandsMoreBtns = document.querySelectorAll('.js-more__btn');
 
     var _iterator = _createForOfIteratorHelper(brandsMoreBtns),
@@ -10482,6 +10449,7 @@ function more() {
     try {
       for (_iterator.s(); !(_step = _iterator.n()).done;) {
         var moreBtn = _step.value;
+        console.log(moreBtn);
         moreBtn.addEventListener('click', moreOpen);
       }
     } catch (err) {
@@ -10495,6 +10463,64 @@ function more() {
 (function () {
   more();
 })();
+
+/***/ }),
+
+/***/ "./src/js/slider.js":
+/*!**************************!*\
+  !*** ./src/js/slider.js ***!
+  \**************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
+/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
+
+
+
+if (window.innerWidth < 768 && (!!document.querySelector('.js-brand-slider') || !!document.querySelector('.js-tech-slider'))) {
+  if (!!document.querySelector('.js-brand-slider')) {
+    var brandSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-brand-slider', {
+      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__["Navigation"], swiper_modules__WEBPACK_IMPORTED_MODULE_1__["Pagination"]],
+      speed: 400,
+      spaceBetween: 16,
+      centeredSlides: true,
+      centerInsufficientSlides: true,
+      slidePerView: 0.5,
+      pagination: {
+        el: '.js-brand-slider-nav',
+        type: 'bullets',
+        bulletActiveClass: 'brand-nav__btn--active',
+        bulletClass: 'brand-nav__btn',
+        bulletElement: 'button',
+        clickable: true
+      }
+    });
+  }
+
+  ;
+
+  if (!!document.querySelector('.js-tech-slider')) {
+    var techSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-tech-slider', {
+      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__["Navigation"], swiper_modules__WEBPACK_IMPORTED_MODULE_1__["Pagination"]],
+      speed: 400,
+      spaceBetween: 16,
+      centeredSlides: true,
+      centerInsufficientSlides: true,
+      slidePerView: 0.5,
+      pagination: {
+        el: '.js-tech-slider-nav',
+        type: 'bullets',
+        bulletActiveClass: 'tech-nav__btn--active',
+        bulletClass: 'tech-nav__btn',
+        bulletElement: 'button',
+        clickable: true
+      }
+    });
+  }
+}
 
 /***/ }),
 

@@ -21,6 +21,10 @@
         display: none;
     }
     &--open {
+        &::after{
+            visibility: visible;
+            opacity: 0.96;
+        }
         overflow: hidden;
         max-height: 100dvh;
         .aside{
