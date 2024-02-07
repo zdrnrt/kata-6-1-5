@@ -13,7 +13,7 @@
     &__list{
         padding: 1rem 1rem 2.375rem;
         @media screen and (min-width: 768px) {
-            padding: 1.5rem 1.5rem 2.125rem;
+            padding: 1.5rem;
         }
         @media screen and (min-width: 1120px) {
             padding-top: 1.5rem;
@@ -98,7 +98,7 @@
         display: none;
         @media screen and (min-width: 768px) {
             display: block;
-            padding-top: 1.5rem;
+            padding-top: 1.2rem;
         }
     }
 }

@@ -1,7 +1,7 @@
 .article{
     padding: 1.25rem 0 2rem;
     @media screen and (min-width: 768px) {
-        padding: 1.5rem 0 3.125rem;
+        padding: 1.5rem 0 2rem;
     }
     @media screen and (min-width: 1120px) {
         padding: 2.6rem 0;
@@ -118,7 +118,7 @@
 
 .article-content{
     @media screen and (min-width: 768px) {
-        padding: 0px 1.5rem 2.5rem;
+        padding: 0px 1.5rem 0rem;
     }
     @media screen and (min-width: 1120px) {
         padding: 0px 2rem 0px;

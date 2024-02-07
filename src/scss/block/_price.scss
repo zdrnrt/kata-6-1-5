@@ -12,6 +12,9 @@
     }
     &__list{
         padding: 1rem 1rem 2.375rem;
+        @media screen and (min-width: 768px) {
+            padding: 1rem 1.5rem;
+        }
     }
 }
 
@@ -49,20 +52,23 @@
             background: linear-gradient(270deg, $greyBg 16.84%, transparent 100%);
         }
     }
+    &__header{
+        display: none;
+    }
     &__slider{
         @media screen and (min-width: 768px) {
-            display: none;
-        }
-    }
-    &__table{
-        display: none;
-        @media screen and (min-width: 768px) {
             display: block;
+            padding: 0 1rem;
+            background-color: $white;
+            border-radius: 0.375rem;
+            box-sizing: border-box;
         }
-
     }
     &__item{
         width: 240px;
+        @media screen and (min-width: 768px) {
+            width: auto;
+        }
     }
     &__nav{
         @media screen and (min-width: 768px) {
@@ -71,25 +77,78 @@
     }
     &__content{
         padding-top: 1rem;
+        @media screen and (min-width: 768px) {
+            padding-top: 1.5rem;
+            max-width: 420px;
+        }
         p {
             margin: 0 0 1.25rem;
             font-size: 0.875rem;
             line-height: 1.25rem;
+            @media screen and (min-width: 768px) {
+                margin-bottom: 1rem;
+            }
         }
     }
     &__link{}
 }
+
+.price-header{
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 1.25rem;
+        padding: 1rem;
+    }
+    &__item{
+        color: $grey;
+        font-size: 0.875rem;
+        line-height: 1rem;
+        &--title{
+            flex: 1 1 auto;
+        }
+        &--price{
+            flex: 0 0 75px;
+        }
+        &--time{
+            flex: 0 0 220px;
+        }
+    }
+}
+
 .price-item{
     padding: 1rem;
-    border: 1px solid $lightgrey;
-    background-color: $white;
-    border-radius: 0.375rem;
-    text-decoration: none;
     font-size: 0.875rem;
     line-height: 1rem;
+    @media screen and (max-width: 767px) {
+        border: 1px solid $lightgrey;
+        background-color: $white;
+        border-radius: 0.375rem;
+    }
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 1.25rem;
+        padding: 1rem 0;
+        & + &{
+            border-top: 1px solid $lightgrey;
+        }
+    }
     &__info{
-        & + & {
-            margin-top: 1rem;
+        @media screen and (max-width: 767px) {
+            & + & {
+                margin-top: 1rem;
+            }
+        }
+        &--title{
+            flex: 1 1 auto;
+        }
+        &--price{
+            flex: 0 0 75px;
         }
         &--last{
             display: flex;
@@ -97,12 +156,20 @@
             justify-content: space-between;
             align-items: flex-end;
             column-gap: 0.5rem;
+            @media screen and (min-width: 768px) {
+                flex: 0 0 220px;
+                align-items: center;
+                column-gap: 1.25rem;
+            }
         }
     }
     &__title{
         margin-bottom: 0.25rem;
         font-weight: 500;
         color: $grey;
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
     }
     &__descr{
         letter-spacing: 0.01em;
@@ -111,6 +178,14 @@
         flex: 0 0 auto;
     }
 }
+
+.price-table{
+    &__tbody{
+        border-radius: 0.375rem;
+        background-color: $white;
+    }
+}
+
 .price-order{
     display: flex;
     flex-flow: row;
