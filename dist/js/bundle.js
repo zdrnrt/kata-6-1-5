@@ -10480,15 +10480,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-if (window.innerWidth < 768 && (!!document.querySelector('.js-brand-slider') || !!document.querySelector('.js-tech-slider'))) {
+if (window.innerWidth < 768 && (!!document.querySelector('.js-brand-slider') || !!document.querySelector('.js-tech-slider') || !!document.querySelector('.js-price-slider'))) {
   if (!!document.querySelector('.js-brand-slider')) {
     var brandSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-brand-slider', {
       modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__["Navigation"], swiper_modules__WEBPACK_IMPORTED_MODULE_1__["Pagination"]],
-      speed: 400,
+      slidesPerView: 'auto',
       spaceBetween: 16,
-      centeredSlides: true,
-      centerInsufficientSlides: true,
-      slidePerView: 0.5,
       pagination: {
         el: '.js-brand-slider-nav',
         type: 'bullets',
@@ -10505,16 +10502,29 @@ if (window.innerWidth < 768 && (!!document.querySelector('.js-brand-slider') || 
   if (!!document.querySelector('.js-tech-slider')) {
     var techSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-tech-slider', {
       modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__["Navigation"], swiper_modules__WEBPACK_IMPORTED_MODULE_1__["Pagination"]],
-      speed: 400,
+      slidesPerView: 'auto',
       spaceBetween: 16,
-      centeredSlides: true,
-      centerInsufficientSlides: true,
-      slidePerView: 0.5,
       pagination: {
         el: '.js-tech-slider-nav',
         type: 'bullets',
         bulletActiveClass: 'tech-nav__btn--active',
         bulletClass: 'tech-nav__btn',
+        bulletElement: 'button',
+        clickable: true
+      }
+    });
+  }
+
+  if (!!document.querySelector('.js-price-slider')) {
+    var priceSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-price-slider', {
+      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__["Navigation"], swiper_modules__WEBPACK_IMPORTED_MODULE_1__["Pagination"]],
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+      pagination: {
+        el: '.js-price-slider-nav',
+        type: 'bullets',
+        bulletActiveClass: 'price-nav__btn--active',
+        bulletClass: 'price-nav__btn',
         bulletElement: 'button',
         clickable: true
       }
