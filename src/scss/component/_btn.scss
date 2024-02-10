@@ -1,0 +1,49 @@
+.circle-btn{
+    &:hover{
+        .circle-btn__circle{
+            fill: $white;
+        }
+        .circle-btn__symbol{
+            fill: $pink;
+        }
+    }
+    &__icon{
+        width: 100%;
+        height: 100%;
+        transition: inherit;
+    }
+    &__circle{
+        fill: $pink;
+        stroke: $pink;
+        transition: inherit;
+    }
+    &__symbol{
+        fill: $white;
+        transition: inherit;
+    }
+}
+.search-btn{
+    &:hover{
+        .close-btn__circle{
+            fill: $white;
+        }
+        .close-btn__cross{
+            fill: $pink;
+        }
+    }
+    &__icon{
+        width: 100%;
+        height: 100%;
+        transition: inherit;
+    }
+    &__circle{
+        fill: $pink;
+        stroke: $pink;
+        transition: inherit;
+    }
+    &__cross{
+        fill: $white;
+        transition: inherit;
+    }
+
+}

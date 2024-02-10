@@ -1,4 +1,4 @@
-import '../scss/block/_more.scss'
+import '../scss/component/_more.scss'
 
 function more(){
     console.log('more');

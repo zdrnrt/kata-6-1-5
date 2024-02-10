@@ -1,3 +1,18 @@
+body {
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        visibility: hidden;
+        width: 100vw;
+        height: 100vh;
+        background-color: $white;
+        opacity: 0;
+        transition: $trans;
+    }
+}
 .aside{
     position: fixed;
     top: 0;
@@ -21,12 +36,12 @@
         display: none;
     }
     &--open {
+        overflow: hidden;
+        max-height: 100dvh;
         &::after{
             visibility: visible;
             opacity: 0.96;
         }
-        overflow: hidden;
-        max-height: 100dvh;
         .aside{
             visibility: visible;
             left: 0;
@@ -79,6 +94,10 @@
     justify-content: flex-start;
     align-items: center;
     column-gap: 1rem;
+    &__btn{
+        width: 40px;
+        height: 40px;
+    }
     &__close{
         @media screen and (min-width: 1440px) {
             display: none;
@@ -98,16 +117,6 @@
     }
 }
 
-.aside-btn{
-    text-decoration: none;
-    &:hover{
-        opacity: 0.7;
-    }
-    &__icon{
-        width: 40px;
-        height: 40px;
-    }
-}
 
 .aside-nav{
     &__list{

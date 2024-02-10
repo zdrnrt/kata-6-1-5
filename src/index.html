@@ -11,7 +11,7 @@
     </title>
 </head>
 
-<body>
+<body class="modal--show">
     <header class="header">
         <div class="header__info header-info">
             <button class="header__btn header-info__menu js-menu-open" type="button">
@@ -117,12 +117,10 @@
     <div class="content">
         <aside class="aside">
             <header class="aside__header aside-header">
-                <button type="button" class="aside-btn aside-header__close js-menu-close">
-                    <svg class="aside-btn__icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="40" height="40" rx="20" fill="#FF3E79" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M13.7935 12.2571C13.403 11.8666 12.7698 11.8666 12.3793 12.2571L12.2571 12.3793C11.8666 12.7698 11.8666 13.403 12.2571 13.7935L18.4636 20L12.2571 26.2065C11.8666 26.597 11.8666 27.2302 12.2571 27.6207L12.3793 27.7429C12.7698 28.1334 13.403 28.1334 13.7935 27.7429L20 21.5364L26.2065 27.7429C26.597 28.1334 27.2302 28.1334 27.6207 27.7429L27.7429 27.6207C28.1334 27.2302 28.1334 26.597 27.7429 26.2065L21.5364 20L27.7429 13.7935C28.1334 13.403 28.1334 12.7698 27.7429 12.3793L27.6207 12.2571C27.2302 11.8666 26.597 11.8666 26.2065 12.2571L20 18.4636L13.7935 12.2571Z"
-                            fill="white" />
+                <button type="button" class="aside-header__btn aside-header__close js-menu-close circle-btn">
+                    <svg class="circle-btn__icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="circle-btn__circle" x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
+                        <path class="circle-btn__symbol"  fill-rule="evenodd" clip-rule="evenodd" d="M13.7935 12.2571C13.403 11.8666 12.7698 11.8666 12.3793 12.2571L12.2571 12.3793C11.8666 12.7698 11.8666 13.403 12.2571 13.7935L18.4636 20L12.2571 26.2065C11.8666 26.597 11.8666 27.2302 12.2571 27.6207L12.3793 27.7429C12.7698 28.1334 13.403 28.1334 13.7935 27.7429L20 21.5364L26.2065 27.7429C26.597 28.1334 27.2302 28.1334 27.6207 27.7429L27.7429 27.6207C28.1334 27.2302 28.1334 26.597 27.7429 26.2065L21.5364 20L27.7429 13.7935C28.1334 13.403 28.1334 12.7698 27.7429 12.3793L27.6207 12.2571C27.2302 11.8666 26.597 11.8666 26.2065 12.2571L20 18.4636L13.7935 12.2571Z" fill="white"/>
                     </svg>
                 </button>
                 <a href="/" class="aside-header__logo aside-logo">
@@ -153,12 +151,10 @@
                             stroke="#80949F" stroke-width="0.5" />
                     </svg>
                 </a>
-                <button type="button" class="aside-btn aside-header__search">
-                    <svg class="aside-btn__icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="40" height="40" rx="20" fill="#FF3E79" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M23.5006 22.0006H22.7106L22.4306 21.7306C23.6306 20.3306 24.2506 18.4206 23.9106 16.3906C23.4406 13.6106 21.1206 11.3906 18.3206 11.0506C14.0906 10.5306 10.5306 14.0906 11.0506 18.3206C11.3906 21.1206 13.6106 23.4406 16.3906 23.9106C18.4206 24.2506 20.3306 23.6306 21.7306 22.4306L22.0006 22.7106V23.5006L26.2606 27.7506C26.6706 28.1606 27.3306 28.1606 27.7406 27.7506L27.7506 27.7406C28.1606 27.3306 28.1606 26.6706 27.7506 26.2606L23.5006 22.0006ZM17.5006 22.0006C15.0106 22.0006 13.0006 19.9906 13.0006 17.5006C13.0006 15.0106 15.0106 13.0006 17.5006 13.0006C19.9906 13.0006 22.0006 15.0106 22.0006 17.5006C22.0006 19.9906 19.9906 22.0006 17.5006 22.0006Z"
-                            fill="white" />
+                <button type="button" class="aside-header__btn aside-header__search circle-btn">
+                    <svg class="circle-btn__icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="circle-btn__circle" x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
+                        <path class="circle-btn__symbol" fill-rule="evenodd" clip-rule="evenodd" d="M23.5006 22.0006H22.7106L22.4306 21.7306C23.6306 20.3306 24.2506 18.4206 23.9106 16.3906C23.4406 13.6106 21.1206 11.3906 18.3206 11.0506C14.0906 10.5306 10.5306 14.0906 11.0506 18.3206C11.3906 21.1206 13.6106 23.4406 16.3906 23.9106C18.4206 24.2506 20.3306 23.6306 21.7306 22.4306L22.0006 22.7106V23.5006L26.2606 27.7506C26.6706 28.1606 27.3306 28.1606 27.7406 27.7506L27.7506 27.7406C28.1606 27.3306 28.1606 26.6706 27.7506 26.2606L23.5006 22.0006ZM17.5006 22.0006C15.0106 22.0006 13.0006 19.9906 13.0006 17.5006C13.0006 15.0106 15.0106 13.0006 17.5006 13.0006C19.9906 13.0006 22.0006 15.0106 22.0006 17.5006C22.0006 19.9906 19.9906 22.0006 17.5006 22.0006Z"/>
                     </svg>
                 </button>
             </header>
@@ -788,6 +784,65 @@
                     Информация, размещенная на данной странице, не является публичной офертой
                 </p>
             </footer>
+        </div>
+    </div>
+    <div id="feedback" class="modal">
+        <div class="modal__control">
+            <button type="button" class="modal__close modal-close js-modal-close circle-btn">
+                <svg class="circle-btn__icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="circle-btn__circle" x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
+                    <path class="circle-btn__symbol"  fill-rule="evenodd" clip-rule="evenodd" d="M13.7935 12.2571C13.403 11.8666 12.7698 11.8666 12.3793 12.2571L12.2571 12.3793C11.8666 12.7698 11.8666 13.403 12.2571 13.7935L18.4636 20L12.2571 26.2065C11.8666 26.597 11.8666 27.2302 12.2571 27.6207L12.3793 27.7429C12.7698 28.1334 13.403 28.1334 13.7935 27.7429L20 21.5364L26.2065 27.7429C26.597 28.1334 27.2302 28.1334 27.6207 27.7429L27.7429 27.6207C28.1334 27.2302 28.1334 26.597 27.7429 26.2065L21.5364 20L27.7429 13.7935C28.1334 13.403 28.1334 12.7698 27.7429 12.3793L27.6207 12.2571C27.2302 11.8666 26.597 11.8666 26.2065 12.2571L20 18.4636L13.7935 12.2571Z" fill="white"/>
+                </svg>                   
+            </button>
+        </div>
+        <header class="modal__header">
+            <h4 class="modal__title">Обратная связь</h4>
+        </header>
+        <div class="modal__content">
+            <form action="#" class="form" method="post">
+                <input type="text" name="name" class="form__input" placeholder="Имя" required>
+                <input type="text" name="phone" class="form__input" placeholder="Телефон" required>
+                <input type="mail" name="email" class="form__input" placeholder="Электронная почта" required>
+                <textarea type="text" name="message" class="form__input form__input--message" placeholder="Сообщение"></textarea>
+                <p class="form__policy">
+                    Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и <a href="#">соглашаетесь с нашей политикой конфиденциальности</a>
+                </p>
+                <button type="submit" class="form__submit form-submit">
+                    ОТПРАВИТЬ
+                    <svg class="form-submit__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3429 11.6332L8.9576 8.90499C8.4637 8.50694 8.46044 7.75553 8.95088 7.35322L9.19827 7.15028C9.56523 6.84926 10.0932 6.84766 10.462 7.14644L15.908 11.5587C15.9554 11.5971 15.9554 11.6694 15.908 11.7078L10.5611 16.0397C10.1346 16.3853 9.52402 16.3834 9.09965 16.0353C8.53248 15.57 8.53625 14.7011 9.10743 14.2407L12.3429 11.6332Z"/>
+                    </svg>
+                        
+                </button>
+            </form>
+        </div>
+    </div>
+    <div id="feedback" class="modal modal--open">
+        <div class="modal__control">
+            <button type="button" class="modal__close modal-close js-modal-close circle-btn">
+                <svg class="circle-btn__icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="circle-btn__circle" x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
+                    <path class="circle-btn__symbol"  fill-rule="evenodd" clip-rule="evenodd" d="M13.7935 12.2571C13.403 11.8666 12.7698 11.8666 12.3793 12.2571L12.2571 12.3793C11.8666 12.7698 11.8666 13.403 12.2571 13.7935L18.4636 20L12.2571 26.2065C11.8666 26.597 11.8666 27.2302 12.2571 27.6207L12.3793 27.7429C12.7698 28.1334 13.403 28.1334 13.7935 27.7429L20 21.5364L26.2065 27.7429C26.597 28.1334 27.2302 28.1334 27.6207 27.7429L27.7429 27.6207C28.1334 27.2302 28.1334 26.597 27.7429 26.2065L21.5364 20L27.7429 13.7935C28.1334 13.403 28.1334 12.7698 27.7429 12.3793L27.6207 12.2571C27.2302 11.8666 26.597 11.8666 26.2065 12.2571L20 18.4636L13.7935 12.2571Z" fill="white"/>
+                </svg>
+            </button>
+        </div>
+        <header class="modal__header">
+            <h4 class="modal__title">Заказать звонок</h4>
+        </header>
+        <div class="modal__content">
+            <form action="#" class="form" method="post">
+                <input type="text" name="phone" class="form__input" placeholder="Телефон" required>
+                <p class="form__policy">
+                    Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и <a href="#">соглашаетесь с нашей политикой конфиденциальности</a>
+                </p>
+                <button type="submit" class="form__submit form-submit">
+                    ОТПРАВИТЬ
+                    <svg class="form-submit__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3429 11.6332L8.9576 8.90499C8.4637 8.50694 8.46044 7.75553 8.95088 7.35322L9.19827 7.15028C9.56523 6.84926 10.0932 6.84766 10.462 7.14644L15.908 11.5587C15.9554 11.5971 15.9554 11.6694 15.908 11.7078L10.5611 16.0397C10.1346 16.3853 9.52402 16.3834 9.09965 16.0353C8.53248 15.57 8.53625 14.7011 9.10743 14.2407L12.3429 11.6332Z"/>
+                    </svg>
+                        
+                </button>
+            </form>
         </div>
     </div>
 
