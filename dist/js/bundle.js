@@ -10386,6 +10386,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_menu__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _more__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./more */ "./src/js/more.js");
 /* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./slider */ "./src/js/slider.js");
+/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modal */ "./src/js/modal.js");
+/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modal__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -10409,6 +10412,66 @@ var open = document.querySelector('.js-menu-open');
 var close = document.querySelector('.js-menu-close');
 open.addEventListener('click', mainMenu);
 close.addEventListener('click', mainMenu);
+
+/***/ }),
+
+/***/ "./src/js/modal.js":
+/*!*************************!*\
+  !*** ./src/js/modal.js ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function modalOpen() {
+  console.log(event.target);
+  document.body.classList.add('modal--show');
+  document.getElementById(event.target.closest('.js-modal-open').dataset.modal).classList.add('modal--open');
+}
+
+function modalClose() {
+  document.body.classList.toggle('modal--show');
+  console.log(document.querySelector('.modal--open'));
+  document.querySelector('.modal--open').classList.remove('modal--open');
+}
+
+var modalOpenBtns = document.querySelectorAll('.js-modal-open');
+
+var _iterator = _createForOfIteratorHelper(modalOpenBtns),
+    _step;
+
+try {
+  for (_iterator.s(); !(_step = _iterator.n()).done;) {
+    var btn = _step.value;
+    btn.addEventListener('click', modalOpen);
+  }
+} catch (err) {
+  _iterator.e(err);
+} finally {
+  _iterator.f();
+}
+
+var modalCloseBtns = document.querySelectorAll('.js-modal-close');
+
+var _iterator2 = _createForOfIteratorHelper(modalCloseBtns),
+    _step2;
+
+try {
+  for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+    var _btn = _step2.value;
+
+    _btn.addEventListener('click', modalClose);
+  }
+} catch (err) {
+  _iterator2.e(err);
+} finally {
+  _iterator2.f();
+}
 
 /***/ }),
 
@@ -10449,7 +10512,6 @@ function more() {
     try {
       for (_iterator.s(); !(_step = _iterator.n()).done;) {
         var moreBtn = _step.value;
-        console.log(moreBtn);
         moreBtn.addEventListener('click', moreOpen);
       }
     } catch (err) {

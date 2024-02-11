@@ -2,11 +2,20 @@
     &--open .js-more__item:nth-child(n){
         display: block;
     }
+    &--open .js-more__icon{
+        transform: rotate(180deg);
+    }
     &--open .js-more__text--show{
         display: none;
     }
     &--open .js-more__text--hide{
         display: block;
+    }
+    &__btn{
+        overflow: hidden;
+    }
+    &__icon{
+        transition: inherit;
     }
     &__text{
         &--hide{

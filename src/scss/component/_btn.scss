@@ -1,4 +1,7 @@
 .circle-btn{
+    &:active{
+        opacity: 0.7;
+    }
     &:hover{
         .circle-btn__circle{
             fill: $white;

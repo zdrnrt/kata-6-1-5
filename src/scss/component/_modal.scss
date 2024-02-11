@@ -21,13 +21,14 @@ body {
     z-index: 5;
     visibility: hidden;
     width: 100%;
+    max-width: 440px;
     max-height: 100dvh;
     background-color: #fff;
     overflow: auto;
     scrollbar-width: none;
     transition: $trans;
     @media screen and (min-width: 768px) {
-        width: 440px;
+        overflow: visible;
         box-shadow: 1rem 0px 3.25rem 0px rgba(14, 24, 80, 0.20), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
     }
     &--show {
@@ -44,6 +45,10 @@ body {
     }
     &__control{
         padding: 1.5rem 1rem 0;
+        @media screen and (min-width: 768px) {
+            position: relative;
+            padding: 0;
+        }
     }
     &__content{
         padding: 0 1rem 1rem;
@@ -55,8 +60,10 @@ body {
     &__close{
         width: 40px;
         height: 40px;
-        &:active{
-            opacity: 0.7;
+        @media screen and (min-width: 768px) {
+            position: absolute;
+            top: 30px;
+            left: -70px;
         }
     }
     &__title{
