@@ -10371,6 +10371,50 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/aside.js":
+/*!*************************!*\
+  !*** ./src/js/aside.js ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function aside() {
+  function asideToggle() {
+    document.body.classList.toggle('aside--open');
+  }
+
+  var asideToggleBtns = document.querySelectorAll('.js-aside-toggle');
+  var asideBg = document.querySelector('.aside__bg');
+
+  var _iterator = _createForOfIteratorHelper(asideToggleBtns),
+      _step;
+
+  try {
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+      var btn = _step.value;
+      btn.addEventListener('click', asideToggle);
+    }
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
+  }
+
+  asideBg.addEventListener('click', asideToggle);
+}
+
+(function () {
+  aside();
+})();
+
+/***/ }),
+
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
@@ -10382,8 +10426,8 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/style.scss */ "./src/scss/style.scss");
 /* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_style_scss__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu */ "./src/js/menu.js");
-/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_menu__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _aside__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./aside */ "./src/js/aside.js");
+/* harmony import */ var _aside__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_aside__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _more__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./more */ "./src/js/more.js");
 /* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./slider */ "./src/js/slider.js");
 /* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modal */ "./src/js/modal.js");
@@ -10394,24 +10438,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 console.log('Works!');
-
-/***/ }),
-
-/***/ "./src/js/menu.js":
-/*!************************!*\
-  !*** ./src/js/menu.js ***!
-  \************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function mainMenu() {
-  document.body.classList.toggle('aside--open');
-}
-
-var open = document.querySelector('.js-menu-open');
-var close = document.querySelector('.js-menu-close');
-open.addEventListener('click', mainMenu);
-close.addEventListener('click', mainMenu);
 
 /***/ }),
 
@@ -10428,66 +10454,70 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-function modalOpen() {
-  console.log(event.target);
-  document.body.classList.add('modal--show');
-  document.getElementById(event.target.closest('.js-modal-open').dataset.modal).classList.add('modal--open');
-}
-
-function modalClose() {
-  document.body.classList.toggle('modal--show');
-  console.log(document.querySelector('.modal--open'));
-  document.querySelector('.modal--open').classList.remove('modal--open');
-}
-
-var modalOpenBtns = document.querySelectorAll('.js-modal-open');
-
-var _iterator = _createForOfIteratorHelper(modalOpenBtns),
-    _step;
-
-try {
-  for (_iterator.s(); !(_step = _iterator.n()).done;) {
-    var btn = _step.value;
-    btn.addEventListener('click', modalOpen);
+function modal() {
+  function modalOpen() {
+    document.body.classList.add('modal--show');
+    document.getElementById(event.target.closest('.js-modal-open').dataset.modal).classList.add('modal--open');
   }
-} catch (err) {
-  _iterator.e(err);
-} finally {
-  _iterator.f();
-}
 
-var modalCloseBtns = document.querySelectorAll('.js-modal-close');
-
-var _iterator2 = _createForOfIteratorHelper(modalCloseBtns),
-    _step2;
-
-try {
-  for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-    var _btn = _step2.value;
-
-    _btn.addEventListener('click', modalClose);
+  function modalClose() {
+    document.body.classList.toggle('modal--show');
+    document.querySelector('.modal--open').classList.remove('modal--open');
   }
-} catch (err) {
-  _iterator2.e(err);
-} finally {
-  _iterator2.f();
-}
 
-var modalBg = document.querySelectorAll('.modal__bg');
+  var modalOpenBtns = document.querySelectorAll('.js-modal-open');
 
-var _iterator3 = _createForOfIteratorHelper(modalBg),
-    _step3;
+  var _iterator = _createForOfIteratorHelper(modalOpenBtns),
+      _step;
 
-try {
-  for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
-    var bg = _step3.value;
-    bg.addEventListener('click', modalClose);
+  try {
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+      var btn = _step.value;
+      btn.addEventListener('click', modalOpen);
+    }
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
   }
-} catch (err) {
-  _iterator3.e(err);
-} finally {
-  _iterator3.f();
+
+  var modalCloseBtns = document.querySelectorAll('.js-modal-close');
+
+  var _iterator2 = _createForOfIteratorHelper(modalCloseBtns),
+      _step2;
+
+  try {
+    for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+      var _btn = _step2.value;
+
+      _btn.addEventListener('click', modalClose);
+    }
+  } catch (err) {
+    _iterator2.e(err);
+  } finally {
+    _iterator2.f();
+  }
+
+  var modalBg = document.querySelectorAll('.modal__bg');
+
+  var _iterator3 = _createForOfIteratorHelper(modalBg),
+      _step3;
+
+  try {
+    for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+      var bg = _step3.value;
+      bg.addEventListener('click', modalClose);
+    }
+  } catch (err) {
+    _iterator3.e(err);
+  } finally {
+    _iterator3.f();
+  }
 }
+
+(function () {
+  modal();
+})();
 
 /***/ }),
 
@@ -10511,8 +10541,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 
 function more() {
-  console.log('more');
-
   function moreOpen(event) {
     event.target.closest('.js-more').classList.toggle('js-more--open');
   }
@@ -10558,7 +10586,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-if (window.innerWidth < 768 && (!!document.querySelector('.js-brand-slider') || !!document.querySelector('.js-tech-slider') || !!document.querySelector('.js-price-slider'))) {
+function slider() {
   if (!!document.querySelector('.js-brand-slider')) {
     var brandSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-brand-slider', {
       modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__["Navigation"], swiper_modules__WEBPACK_IMPORTED_MODULE_1__["Pagination"]],
@@ -10609,6 +10637,12 @@ if (window.innerWidth < 768 && (!!document.querySelector('.js-brand-slider') || 
     });
   }
 }
+
+(function () {
+  if (window.innerWidth < 768) {
+    slider();
+  }
+})();
 
 /***/ }),
 

@@ -1,9 +1,7 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 
-
-
-if (window.innerWidth < 768 && (!!document.querySelector('.js-brand-slider') || !!document.querySelector('.js-tech-slider') || !!document.querySelector('.js-price-slider')) ){
+function slider(){
     if (!!document.querySelector('.js-brand-slider')){
         const brandSlider = new Swiper('.js-brand-slider', {
             modules: [Navigation, Pagination],
@@ -52,3 +50,9 @@ if (window.innerWidth < 768 && (!!document.querySelector('.js-brand-slider') || 
         });
     }
 }
+
+(function(){
+    if (window.innerWidth < 768 ){
+        slider();
+    }
+})();

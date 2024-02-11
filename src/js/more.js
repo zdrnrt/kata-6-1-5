@@ -1,7 +1,6 @@
 import '../scss/component/_more.scss'
 
 function more(){
-    console.log('more');
 
     function moreOpen(event){
         event.target.closest('.js-more').classList.toggle('js-more--open');
