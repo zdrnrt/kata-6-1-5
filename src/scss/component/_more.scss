@@ -13,6 +13,9 @@
     }
     &__btn{
         overflow: hidden;
+        &:hover{
+            opacity: 0.7;
+        }
     }
     &__icon{
         transition: inherit;

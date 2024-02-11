@@ -20,3 +20,8 @@ let modalCloseBtns = document.querySelectorAll('.js-modal-close');
 for (let btn of modalCloseBtns){
     btn.addEventListener('click', modalClose);
 }
+
+let modalBg = document.querySelectorAll('.modal__bg');
+for (let bg of modalBg){
+    bg.addEventListener('click', modalClose);
+}

@@ -73,6 +73,9 @@
     text-decoration: none;
     color: $black;
     &:hover{
+        color: $grey;
+    }
+    &:active{
         opacity: 0.7;
     }
     &__icon{

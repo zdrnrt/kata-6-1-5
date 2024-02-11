@@ -1,7 +1,7 @@
 .brand{
     &__header{
         padding: 1rem;
-        background: linear-gradient(270deg, $greyBg 0%, $white 98.61%);
+        background: linear-gradient(90deg, transparent 0%, $white 98.61%);
         border-top: 1px solid $lightcian;
         @media screen and (min-width: 768px) {
             padding: 1rem 1.5rem;

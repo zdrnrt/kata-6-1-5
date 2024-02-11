@@ -1,47 +1,50 @@
-body {
-    &::after{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        visibility: hidden;
-        width: 100vw;
-        height: 100vh;
-        background-color: $white;
-        opacity: 0;
-        transition: $trans;
-    }
-}
 .modal{
     position: fixed;
     top: 0;
     bottom: 0;
-    right: -100%;
+    left: 0;
+    right: 0;
     z-index: 5;
     visibility: hidden;
-    width: 100%;
-    max-width: 440px;
-    max-height: 100dvh;
-    background-color: #fff;
     overflow: auto;
     scrollbar-width: none;
-    transition: $trans;
-    @media screen and (min-width: 768px) {
-        overflow: visible;
-        box-shadow: 1rem 0px 3.25rem 0px rgba(14, 24, 80, 0.20), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
-    }
     &--show {
-        &::after{
-            visibility: visible;
-            opacity: 0.96;
-        }
         overflow: hidden;
         max-height: 100dvh;
     }
     &--open{
-        right: 0;
         visibility: visible;
+        .modal__bg{
+            visibility: visible;
+            opacity: 0.96;
+        }
+        .modal__container{
+            transform: none;
+        }
+    }
+    &__bg{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        visibility: hidden;
+        opacity: 0;
+        background-color: $white;
+        transition: $trans;
+    }
+    &__container{
+        position: relative;
+        margin-left: auto;
+        width: 100%;
+        max-width: 440px;
+        height: 100dvh;
+        background-color: #fff;
+        transition: $trans;
+        transform: translateX(120%);
+        @media screen and (min-width: 768px) {
+            box-shadow: 1rem 0px 3.25rem 0px rgba(14, 24, 80, 0.20), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+        }
     }
     &__control{
         padding: 1.5rem 1rem 0;

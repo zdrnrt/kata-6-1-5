@@ -10473,6 +10473,22 @@ try {
   _iterator2.f();
 }
 
+var modalBg = document.querySelectorAll('.modal__bg');
+
+var _iterator3 = _createForOfIteratorHelper(modalBg),
+    _step3;
+
+try {
+  for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+    var bg = _step3.value;
+    bg.addEventListener('click', modalClose);
+  }
+} catch (err) {
+  _iterator3.e(err);
+} finally {
+  _iterator3.f();
+}
+
 /***/ }),
 
 /***/ "./src/js/more.js":
