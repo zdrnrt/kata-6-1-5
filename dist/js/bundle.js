@@ -10455,12 +10455,18 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 function modal() {
+  function listener(event) {
+    if (event.code == 'Escape') modalClose();
+  }
+
   function modalOpen() {
     document.body.classList.add('modal--show');
     document.getElementById(event.target.closest('.js-modal-open').dataset.modal).classList.add('modal--open');
+    document.addEventListener('keydown', listener);
   }
 
   function modalClose() {
+    document.removeEventListener('keydown', listener);
     document.body.classList.toggle('modal--show');
     document.querySelector('.modal--open').classList.remove('modal--open');
   }
